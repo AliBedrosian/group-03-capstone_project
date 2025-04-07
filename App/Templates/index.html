@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Sentiment Predictor</title>
+    <!-- Bootswatch Lux Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">📊 SentimentStock</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/predictor">Predictor</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="/visuals">Visuals</a></li>
+                <li class="nav-item"><a class="nav-link" href="/writeup">Write-up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5 text-center">
+        <h1 class="display-4">🚀 Welcome to Our Tesla Stock & Tweet Sentiment Analysis</h1>
+        <p class="lead mt-4">Analyze tweet sentiment and predict Tesla stock movement with the power of AI.</p>
+        <a href="/predictor" class="btn btn-primary btn-lg mt-3">Try the Predictor</a>
+    </div>
+
+
+    <!-- Prediction Form -->
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Enter Tweet Text</h2>
+                <form method="POST">
+                    <div class="form-group">
+                        <textarea class="form-control" name="tweet_text" rows="4" placeholder="What are people saying about Tesla?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Predict Stock Movement</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prediction Results -->
+    {% if prediction %}
+    <div class="container mt-4">
+        <div class="alert alert-success text-center">
+            <h4>Predicted Change in Price: %{{ prediction }}</h4>
+            <p>Average Sentiment Score: {{ sentiment }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Optional Bootstrap JS for mobile navbar -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://
