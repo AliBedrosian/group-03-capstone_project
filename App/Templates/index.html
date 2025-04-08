@@ -29,7 +29,7 @@
 
     <div class="container mt-5 text-center">
         <h1 class="display-4">🚀 Welcome to Our Tesla Stock & Tweet Sentiment Analysis</h1>
-        <p class="lead mt-4">Analyze tweet sentiment and predict Tesla stock movement with the power of AI.</p>
+        <p class="lead mt-4">Analyze tweet sentiment and predict Tesla stock movement with the power of machine learning.</p>
         <a href="/predictor" class="btn btn-primary btn-lg mt-3">Try the Predictor</a>
     </div>
 
@@ -52,9 +52,8 @@
     <!-- Prediction Results -->
     {% if prediction %}
     <div class="container mt-4">
-        <div class="alert alert-success text-center">
-            <h4>Predicted Change in Price: %{{ prediction }}</h4>
-            <p>Average Sentiment Score: {{ sentiment }}</p>
+        <div class="alert alert-info text-center">
+            <h4>Predicted Change in Tesla Stock: {{ prediction }}</h4>
         </div>
     </div>
     {% endif %}
