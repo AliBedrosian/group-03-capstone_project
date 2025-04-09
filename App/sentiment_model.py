@@ -11,7 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-senti
 model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
 
 # Load your trained regression model (trained to predict % change from sentiment score)
-regression_model = joblib.load("prediction_model.pkl")
+regression_model = joblib.load("model.pkl")
 
 
 def analyze_sentiment(text):
