@@ -16,5 +16,9 @@ Gavin Bozan: ReadME File, Exploratory data analysis and research question 1 (imp
 Ivy Montero: Sentiment analysis & ML model development (prediction of price change)
 Ali McCondichie: Tableau Dashboard 1 - Tweet Activity vs Stock Price
 Seven George: Tableau Dashboard 2 - Sentiment & Volatility Visuals
+
+View our project online here:
+[Elon Musk Tweets vs. Telsa Stock Prices](https://alibedrosian.pythonanywhere.com/)
+
 How to Run:
 1. Clone the repo 2. Navigate to the `/model` folder 3. Run `model.py` ```bash git clone https://github.com/AliBedrosian/group-03-capstone_project.git cd group-03-capstone_project/model python model.py
